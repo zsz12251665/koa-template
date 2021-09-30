@@ -1,0 +1,22 @@
+{
+  "name": "koa-template",
+  "version": "0.0.0",
+  "description": "A Template Repository based on Koa",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zsz12251665/koa-template.git"
+  },
+  "keywords": [
+    "koa",
+    "template"
+  ],
+  "author": "zsz12251665",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zsz12251665/koa-template/issues"
+  },
+  "homepage": "https://github.com/zsz12251665/koa-template#readme"
+}
