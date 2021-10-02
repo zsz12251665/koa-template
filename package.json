@@ -27,10 +27,13 @@
     "@koa/router": "^10.1.1",
     "bunyan": "^1.8.15",
     "dotenv": "^10.0.0",
+    "joi": "^17.4.2",
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.13.3",
     "koa-body": "^4.2.0",
-    "koa-static": "^5.0.0"
+    "koa-helmet": "^6.1.0",
+    "koa-static": "^5.0.0",
+    "moment": "^2.29.1"
   },
   "devDependencies": {
     "@types/bunyan": "^1.8.7",

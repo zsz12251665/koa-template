@@ -7,7 +7,7 @@ A Template Repository based on Koa
 ```bash
 koa-template
 | .env                  # dotenv Configuration (Not Included)
-| .env.template         # dotenv Temaplate Configuration
+| .env.template         # dotenv Template Configuration
 | .eslintrc.json        # ESLint Configuration
 | .gitignore            # Git Ignore List
 | LICENCE               # Open Source Licence
@@ -27,10 +27,13 @@ koa-template
 |-- lib                 # Module Library
 |   |
 |   |-- jwt             # JsonWebToken Module
-|   |   | index.ts      # JsonWebToken Function Script
+|   |   | index.ts      # Function Script
+|   |   | options.ts    # Sign Options Presets
 |   |
 |   |-- logger          # Logging Module
 |       | index.ts      # Logger Script
+|
+|-- log                 # Log Default Directory
 |
 |-- routes              # Application Routers
 |   | index.ts          # Root Router
