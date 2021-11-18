@@ -1,5 +1,5 @@
 import { randomBytes } from 'crypto';
-import { JwtPayload, sign as signJWT, SignOptions, verify } from 'jsonwebtoken';
+import { JsonWebTokenError, JwtPayload, sign as signJWT, SignOptions, verify } from 'jsonwebtoken';
 import conf from '../conf';
 import * as options from './options';
 
@@ -24,7 +24,10 @@ function sign(content: object, options: SignOptions): string {
  * @throws {JsonWebTokenError} Error when interpreting
  */
 function interpret(token: string): JwtPayload {
-	return <JwtPayload>verify(token, secret, { issuer });
+	const res = verify(token, secret, { issuer });
+	if (typeof res === 'string')
+		throw new JsonWebTokenError('jwt payload is string');
+	return res;
 }
 
 export default { sign, interpret, options };
