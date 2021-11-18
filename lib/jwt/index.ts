@@ -1,9 +1,10 @@
 import { randomBytes } from 'crypto';
 import { JwtPayload, sign as signJWT, SignOptions, verify } from 'jsonwebtoken';
+import conf from '../conf';
 import * as options from './options';
 
-const issuer = process.env.JWT_ISSUER;
-const secret = process.env.JWT_SECRET ?? randomBytes(16).toString('hex');
+const issuer = conf('JWT_ISSUER', 'JWT');
+const secret = conf('JWT_SECRET', randomBytes(16).toString('hex'));
 
 /**
  * Sign a JWT token

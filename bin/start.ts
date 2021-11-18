@@ -1,7 +1,8 @@
 import app from '../app';
+import conf from '../lib/conf';
 import logger from '../lib/logger';
 
-const port = process.env.PORT;
+const port = Number(conf('PORT'));
 
 async function createServer() {
 	/**

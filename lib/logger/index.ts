@@ -1,9 +1,10 @@
 import bunyan from 'bunyan';
 import fs from 'fs';
 import path from 'path';
+import conf from '../conf';
 
-const name = process.env.LOGGER_NAME ?? 'koa';
-const location = process.env.LOGGER_PATH ?? 'log';
+const name = conf('LOGGER_NAME', 'log');
+const location = conf('LOGGER_PATH', 'logs');
 if (!fs.existsSync(location))
 	fs.mkdirSync(location);
 

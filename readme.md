@@ -10,7 +10,7 @@ koa-template
 | .env.template         # dotenv Template Configuration
 | .eslintrc.json        # ESLint Configuration
 | .gitignore            # Git Ignore List
-| LICENCE               # Open Source Licence
+| LICENCE               # Open Source License
 | package-lock.json     # NPM Package List
 | package.json          # NPM Configuration
 | readme.md             # ReadMe Document
@@ -20,11 +20,16 @@ koa-template
 |   | index.ts          # Application Script
 |
 |-- bin                 # Script Entries
-|   | test.ts           # Start the server with the original TypeScript & hot reloading
+|   | start.ts          # Start the server with the original TypeScript files
 |
 |-- dist                # Distribution Outputs
 |
 |-- lib                 # Module Library
+|   |
+|   |-- conf            # config Module
+|   |   | error.ts      # ConfigurationError Class
+|   |   | index.ts      # Getter Function Script
+|   |   | prefix.ts     # Fallback Prefixes
 |   |
 |   |-- jwt             # JsonWebToken Module
 |   |   | index.ts      # Function Script
@@ -33,10 +38,10 @@ koa-template
 |   |-- logger          # Logging Module
 |       | index.ts      # Logger Script
 |
-|-- log                 # Log Default Directory
+|-- logs                # Default Log Directory
 |
 |-- routes              # Application Routers
 |   | index.ts          # Root Router
 |
-|-- static              # Static Resources
+|-- static              # Default Static Resources Directory
 ```
